@@ -1,0 +1,14 @@
+{
+  "workbench.colorTheme": "Light Modern",
+"workbench.colorCustomizations": {
+    "terminal.background": "#FFF9E6"
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "workbench.editor.openSideBySideDirection": "right",
+  "workbench.editor.enablePreview": false,
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
+  }
+}

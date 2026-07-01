@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Python (the skill scripts create these when run)
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+
+# Build outputs created during the workshop
+*.pptx
+*.pdf
+dashboard.html
+server.js
+project_health_clean.csv
+
+# Local Claude settings
+.claude/settings.local.json
+
+# Personal CLAUDE.md - each participant builds their own; repo ships CLAUDE.template.md
+/CLAUDE.md
+/CLAUDE.draft.md
+
+# Pre-work drop targets - ship the folders empty, never commit real (or test) files
+work-files/*
+!work-files/.gitkeep
+writing-samples/*
+!writing-samples/.gitkeep

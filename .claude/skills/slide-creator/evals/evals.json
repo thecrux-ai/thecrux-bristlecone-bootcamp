@@ -1,0 +1,46 @@
+{
+  "skill_name": "slide-creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Make me a 10-slide presentation about the rise of AI coding tools. Audience is senior engineers at a mid-size startup. Use the dark developer theme.",
+      "expected_output": "A self-contained HTML file saved to /tmp/ with 10 slides, dark theme (#0f1117 background), keyboard and click navigation, slide counter, and substantive content about AI coding tools. Slides should use varied layouts (not all bullets).",
+      "files": [],
+      "assertions": [
+        "The output is a valid HTML file (contains <!DOCTYPE html> or <html)",
+        "The HTML uses a dark background color — contains #0f1117, #111, #0d0d0d, or a clearly dark background in the CSS",
+        "The deck has approximately 10 slides — count elements with class 'slide'; expect 9-11",
+        "Keyboard navigation is implemented — JS contains 'ArrowRight' or 'keydown' listener",
+        "A slide counter is rendered — HTML contains a counter element showing current/total slide number",
+        "Slide content mentions specific AI coding tools by name (e.g. Copilot, Cursor, Codeium, Tabnine, Devin, or similar)",
+        "At least two distinct layout types are used — data-layout or class attributes vary across slides (not all identical)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Turn this outline into slides:\n\n# Why We're Changing Our Pricing\n\n## The problem\n- Enterprise customers outgrew our tiers\n- $49/mo cap was limiting deal size\n- 3 churned accounts cited pricing complexity\n\n## What's changing\n- New plan: $199/mo per workspace\n- Unlimited seats (was: $10/seat)\n- Annual discount: 20% (was: 10%)\n\n## Impact\n- ARR model improves by ~18%\n- NPS risk: communicate clearly to existing customers\n- Migration: 90-day grace period for legacy plans\n\n## Next steps\n- Email to customers goes out Tuesday\n- Sales deck updated by EOD Friday\n- FAQ page live by next Monday",
+      "expected_output": "A self-contained HTML slideshow with slides matching the outline structure. User should be asked only about theme (not content). Slide titles match the headings, bullets are short, layout varies.",
+      "files": [],
+      "assertions": [
+        "The output is a valid HTML file",
+        "The deck has 4-6 slides — each major outline section becomes at least one slide",
+        "Pricing specifics from the outline appear in the slides — contains '$199', '$49', 'unlimited seats', or '90-day'",
+        "Keyboard navigation is implemented — JS contains 'ArrowRight' or 'keydown' listener",
+        "The slides follow the outline structure — titles or sections match The problem, What's changing, Impact, and Next steps"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I want to make a slide deck for a 5-minute lightning talk I'm giving at our company all-hands about why we should adopt TypeScript across all our projects. Clean minimal theme. Keep it tight — 6 slides max.",
+      "expected_output": "A self-contained HTML file with 5-6 slides on TypeScript adoption, clean minimal theme (white background, blue accent), keyboard/click navigation, persuasive content appropriate for an internal all-hands audience.",
+      "files": [],
+      "assertions": [
+        "The output is a valid HTML file",
+        "The deck has 6 or fewer slides — count .slide elements",
+        "Clean/light theme is used — background is white, off-white, or light (#fff, #f8f8f8, or similar), NOT dark",
+        "Keyboard navigation is implemented — JS contains 'ArrowRight' or 'keydown' listener",
+        "Content is specifically about TypeScript adoption — mentions TypeScript benefits such as type safety, IDE support, refactoring, or catching bugs at compile time"
+      ]
+    }
+  ]
+}
